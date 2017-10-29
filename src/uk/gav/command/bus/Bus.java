@@ -18,5 +18,9 @@ public abstract class Bus<T extends Register<U>, U> {
 	public U pop() {
 		return bus.pop();
 	}
+	
+	public boolean isBusEmpty() {
+		return bus.isEmpty();
+	}
 
 }

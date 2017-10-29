@@ -1,11 +1,13 @@
 package uk.gav;
 
+import javafx.application.Application;
 import uk.gav.command.bus.AddressBus;
 import uk.gav.command.bus.DataBus;
 import uk.gav.cpu.ControlUnit;
 import uk.gav.loaders.MemoryProgramLoader;
 import uk.gav.memory.Memory;
 import uk.gav.memory.MemoryController;
+import uk.gav.view.ComputerView;
 
 public class Computer {
 	private DataBus 			databus = new DataBus();
@@ -18,6 +20,7 @@ public class Computer {
 	public static void main(String[] args) throws Exception {
 		Computer c = new Computer();
 		Long pMemorySlot = c.loadProgram();
+		
 		c.runProgram(pMemorySlot);
 	}
 	
@@ -40,5 +43,13 @@ public class Computer {
 		controlUnit.initialiseProgram(start);
 		controlUnit.runProgram();
 		
+	}
+	
+	public Memory getMemory() {
+		return memory;
+	}
+	
+	public ControlUnit getControlUnit() {
+		return controlUnit;
 	}
 }

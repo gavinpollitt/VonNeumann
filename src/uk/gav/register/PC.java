@@ -1,7 +1,7 @@
 package uk.gav.register;
 
 public class PC implements Register<Long> {
-	private Long value;
+	private Long value = 0L;
 	
 	@Override
 	public void setValue(Long l) {

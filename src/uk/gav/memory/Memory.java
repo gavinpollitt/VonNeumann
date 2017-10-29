@@ -37,5 +37,10 @@ public class Memory {
 		
 		return output;
 	}
-
+	
+	//Only for showing on UI
+	public Map<Long,String> getRAM() {
+		return RAM;
+	}
+	
 }

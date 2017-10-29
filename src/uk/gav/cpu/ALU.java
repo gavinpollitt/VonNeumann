@@ -21,7 +21,11 @@ public class ALU {
 		return acc.getValue();
 	}
 	
+	public ACC getAcc() {
+		return this.acc;
+	}
 	public String toString() {
 		return "Accumulator:" + acc.getValue();
 	}
+	
 }
